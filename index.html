@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <header>Weather Dashboard</header>
+    <main>
+      <div class="container">
+        <div class="sidebar">
+          <div class="row">
+            <h2>Search for a City:</h2>
+            <div class="search col-3">
+              <input type="text" />
+              <button id="searchBtn">Search</button>
+            </div>
+            <div class="recents"></div>
+          </div>
+        </div>
+        <div class="large-weather">
+          <div class="current-weather">
+            <h2 id="current-city"></h2>
+            <ul class="weather-conditions"></ul>
+          </div>
+          <h2>5-Day Forecast:</h2>
+          <div class="weather-cards">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://via.placeholder.com/150"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
