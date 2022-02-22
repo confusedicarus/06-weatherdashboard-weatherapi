@@ -14,7 +14,7 @@ header {
   display: flex;
 }
 .current-weather {
-  background-color: black;
+  background-color: slategray;
   height: 60vh;
   width: 60vw;
   margin-left: 5%;
