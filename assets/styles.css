@@ -1,0 +1,33 @@
+h1 {
+  background: linear-gradient(#2e3844, #548c89);
+  text-align: center;
+  height: 60px;
+}
+h2 {
+  margin-left: 5%;
+}
+header {
+  justify-content: center;
+  display: block;
+}
+.container {
+  display: flex;
+}
+.current-weather {
+  background-color: black;
+  height: 60vh;
+  width: 60vw;
+  margin-left: 5%;
+}
+.row {
+  flex-direction: column;
+}
+.sidebar {
+  height: 80vh;
+  width: 30%;
+  background-color: blue;
+  margin-top: 1.5%;
+}
+.weather-cards {
+  margin-left: 5%;
+}

@@ -8,17 +8,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
     />
+    <!-- <link rel="stylesheet" href="./assets/reset.css"> -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <title>Weather Dashboard</title>
   </head>
   <body>
-    <header>Weather Dashboard</header>
+    <header>
+      <h1>Weather Dashboard</header></h1>
     <main>
       <div class="container">
         <div class="sidebar">
           <div class="row">
-            <h2>Search for a City:</h2>
-            <div class="search col-3">
+            <div class="search col-12">
+              <h5>Search for a City:</h5>
               <input type="text" />
               <button id="searchBtn">Search</button>
             </div>
@@ -40,21 +42,15 @@
               />
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <ul class="card-text">
+
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="./assets/script.js"></script>
   </body>
 </html>
