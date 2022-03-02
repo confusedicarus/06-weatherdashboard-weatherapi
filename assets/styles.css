@@ -15,19 +15,19 @@ header {
 }
 .current-weather {
   background-color: slategray;
-  height: 60vh;
-  width: 60vw;
+  width: 70vw;
+  min-height: 40vh;
   margin-left: 5%;
 }
 .row {
   flex-direction: column;
 }
 .sidebar {
-  height: 80vh;
-  width: 30%;
+  max-height: 90vh;
+  /* width: 30%; */
   background-color: blue;
   margin-top: 1.5%;
 }
-.weather-cards {
+.weather-forecast {
   margin-left: 5%;
 }
