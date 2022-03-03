@@ -10,6 +10,9 @@ header {
   justify-content: center;
   display: block;
 }
+.btnWrapper {
+  justify-content: center;
+}
 .container {
   display: flex;
 }
@@ -20,11 +23,16 @@ header {
   margin-left: 5%;
 }
 .forecastday {
+  width: fit-content;
+  background-color: slategray;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding-bottom: 1%;
 }
 .forecast-wrapper {
+  justify-content: space-evenly;
   width: 100%;
   display: block;
-  margin-left: 2%;
 }
 .row {
   flex-direction: row;
@@ -32,9 +40,13 @@ header {
 .sidebar {
   max-height: 90vh;
   /* width: 30%; */
-  background-color: blue;
+  background-color: slategray;
   margin-top: 1.5%;
+}
+.weather-conditions {
+  padding-bottom: 1%;
 }
 .weather-forecast {
   margin-left: 5%;
+  flex-wrap: nowrap;
 }

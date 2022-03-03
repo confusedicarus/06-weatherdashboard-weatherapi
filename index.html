@@ -30,7 +30,7 @@
               <h5>Search for a City:</h5>
   
               <input id="userInput" type="text" class="form-control" placeholder="Enter City Name" />
-              <div class="input-group-text">
+              <div class="input-group-text btnWrapper">
                 <button class="btn btn-primary" type="button" id="searchBtn">Search</button>
               </button>
               </div>
@@ -42,16 +42,47 @@
         <div class="large-weather">
           <div class="current-weather">
             <h2 id="current-city"></h2>
-            <ul class="weather-conditions" style="list-style: none;"></ul>
+            <img id="currentWeatherIcon" src="" alt="">
+            <ul class="weather-conditions" style="list-style: none;">
+              <li id="currentTemp"></li>
+              <li id="maxTemp"></li>
+              <li id="minTemp"></li>
+              <li id="uvIndex"></li>              
+            </ul>
           </div>
           <h2>5-Day Forecast:</h2>
           <div class="container forecast-wrapper">
             <div class="weather-forecast row">
-              <div class="forecastday col-3" id="day1"></div>
-              <div class="forecastday col-3" id="day2"></div>
-              <div class="forecastday col-2" id="day3"></div>
-              <div class="forecastday col-2" id="day4"></div>
-              <div class="forecastday col-2" id="day5"></div>
+              <div class="forecastday" id="day1">
+                <img class="forecastIcon" src="" alt="">
+                <div class="forecastTemp"></div>
+                <div class="forecastWind"></div>
+                <div class="forecastHumid"></div>
+              </div>
+              <div class="forecastday" id="day2">
+                <img class="forecastIcon" src="" alt="">
+                <div class="forecastTemp"></div>
+                <div class="forecastWind"></div>
+                <div class="forecastHumid"></div>
+              </div>
+              <div class="forecastday" id="day3">
+                <img class="forecastIcon" src="" alt="">
+                <div class="forecastTemp"></div>
+                <div class="forecastWind"></div>
+                <div class="forecastHumid"></div>
+              </div>
+              <div class="forecastday" id="day4">
+                <img class="forecastIcon" src="" alt="">
+                <div class="forecastTemp"></div>
+                <div class="forecastWind"></div>
+                <div class="forecastHumid"></div>
+              </div>
+              <div class="forecastday" id="day5">
+                <img class="forecastIcon" src="" alt="">
+                <div class="forecastTemp"></div>
+                <div class="forecastWind"></div>
+                <div class="forecastHumid"></div>
+              </div>
             </div>
           </div>
         </div>
