@@ -19,8 +19,15 @@ header {
   min-height: 40vh;
   margin-left: 5%;
 }
+.forecastday {
+}
+.forecast-wrapper {
+  width: 100%;
+  display: block;
+  margin-left: 2%;
+}
 .row {
-  flex-direction: column;
+  flex-direction: row;
 }
 .sidebar {
   max-height: 90vh;

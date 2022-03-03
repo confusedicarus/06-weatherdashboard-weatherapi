@@ -7,35 +7,9 @@ var lastCity = [];
 var currentCityEl = document.querySelector("#current-city");
 var weatherConditionEl = document.querySelector(".weather-conditions");
 var forecastEl = document.querySelector(".forecastday");
+var forecastWrapper = document.querySelector(".weather-forecast");
 var lat = "";
 var lon = "";
-
-// var dateEl = new Date();
-// var day = dateEl.getDate();
-// let dayFormat = day.toLocaleString("en-US", {
-//   minimumIntegerDigits: 2,
-//   useGrouping: false,
-// });
-
-// var monthNumbers = [
-//   "01",
-//   "02",
-//   "03",
-//   "04",
-//   "05",
-//   "06",
-//   "07",
-//   "08",
-//   "09",
-//   "10",
-//   "11",
-//   "12",
-// ];
-// let month = monthNumbers[dateEl.getMonth()];
-// let year = dateEl.getFullYear();
-// console.log(month);
-// console.log(dayFormat);
-// console.log(year);
 
 function getCity() {
   var city = cityInputEl.value;
@@ -43,20 +17,20 @@ function getCity() {
   localStorage.setItem("city", JSON.stringify(lastCity));
   fetch(weatherCall + city + "&units=imperial" + weatherKey)
     .then(function (response) {
-      // console.log(response.status);
-      // console.log(response);
       return response.json();
     })
     .then(function (data) {
-      // console.log(data);
+      console.log(data);
       lat = data.coord.lat;
       lon = data.coord.lon;
-      var weatherIcon = data.weather[0].icon;
+      currentCityEl.textContent = data.name;
+      weatherIcon = data.weather[0].icon;
       weatherIconEl = document.createElement("img");
       weatherIconEl.setAttribute(
         "src",
         "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png"
       );
+      weatherIconEl.setAttribute("id", "largeIcon");
       weatherConditionEl.appendChild(weatherIconEl);
       currentTempEl = document.createElement("li");
       currentTempEl.textContent = "Current Temp: " + data.main.temp.toFixed(0);
@@ -81,10 +55,28 @@ function getCity() {
           })
           .then(function (data) {
             console.log(data);
-            for (var i = 0; i < 5; i++) {
+            var forecastIndex = [4, 12, 20, 28, 36];
+            for (var i = 0; i < forecastIndex.length; i++) {
+              var forecastIcon = data.list[forecastIndex[i]].weather[0].icon;
+              forecastIconEl = document.createElement("img");
+              forecastIconEl.setAttribute(
+                "src",
+                "https://openweathermap.org/img/wn/" + forecastIcon + "@2x.png"
+              );
+              forecastWrapper.children[i].appendChild(forecastIconEl);
               forecastTemp = document.createElement("div");
-              forecastTemp.textContent = data.list[i].main.temp;
-              forecastEl.appendChild(forecastTemp);
+              forecastTemp.textContent =
+                "Temp: " + data.list[forecastIndex[i]].main.temp;
+              console.log(forecastWrapper.children);
+              forecastWrapper.children[i].appendChild(forecastTemp);
+              windEl = document.createElement("div");
+              windEl.textContent =
+                "Wind Speed: " + data.list[forecastIndex[i]].wind.speed;
+              forecastWrapper.children[i].appendChild(windEl);
+              humidityEl = document.createElement("div");
+              humidityEl.textContent =
+                "Humidity: " + data.list[forecastIndex[i]].main.humidity;
+              forecastWrapper.children[i].appendChild(humidityEl);
             }
           });
       }
