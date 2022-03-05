@@ -26,9 +26,7 @@ header {
 .forecastday {
   width: fit-content;
   background-color: slategray;
-  margin-left: 1%;
-  margin-right: 1%;
-  padding-bottom: 1%;
+  margin: 1%;
 }
 .forecast-wrapper {
   justify-content: space-evenly;
@@ -49,5 +47,4 @@ header {
 }
 .weather-forecast {
   margin-left: 5%;
-  flex-wrap: nowrap;
 }
